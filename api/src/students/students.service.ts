@@ -49,7 +49,7 @@ export class StudentsService {
         .where('LOWER(student.schoolName) LIKE :schoolName', {
           schoolName: `%${schoolName.toLowerCase()}%`,
         })
-        .getOne();
+        .getMany();
 
       return { success: true, data };
     } catch (e) {
