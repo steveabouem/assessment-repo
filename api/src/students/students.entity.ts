@@ -12,8 +12,8 @@ export class Student {
   lastName: string;
 
   @Column({ nullable: false })
-  grade: boolean;
+  grade: number;
 
-  @Column()
+  @Column({ nullable: false })
   schoolName: string;
 }
