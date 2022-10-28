@@ -8,8 +8,6 @@ export class StudentsController {
 
   @Post()
   create(@Body() newStudent: CreateStudentDTO) {
-    console.log({ newStudent });
-
     return this.service.create(newStudent);
   }
 

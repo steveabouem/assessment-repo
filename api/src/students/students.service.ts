@@ -2,12 +2,13 @@ import { DataSource } from 'typeorm';
 import { Injectable } from '@nestjs/common';
 import { Student } from './students.entity';
 import { BaseResponseDTO } from 'src/common/dto/base-response.dto';
+import { CreateStudentDTO } from './dto/create-student.dto';
 
 @Injectable()
 export class StudentsService {
   constructor(private dataSource: DataSource) {}
 
-  async create(newStudent): Promise<BaseResponseDTO> {
+  async create(newStudent: CreateStudentDTO): Promise<BaseResponseDTO> {
     const qr = this.dataSource.createQueryRunner();
     await qr.connect();
     await qr.startTransaction();
@@ -34,6 +35,8 @@ export class StudentsService {
 
       return { success: true, data: student };
     } catch (e) {
+      console.log(e);
+      
       qr.release();
       return { success: false, data: e };
     }
