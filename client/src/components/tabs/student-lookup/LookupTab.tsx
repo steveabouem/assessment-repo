@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Formik } from "formik";
-import { Student } from "./types";
-import StudentSearchInput from "../input/StudentSearchInput";
+import { Student } from "../types";
+import StudentSearchInput from "../../input/StudentSearchInput";
+import StudentsTable from "./StudentsTable";
+import "./styles.scss";
 
-const SearchStudentsTab = () => {
+const StudentLookupTab = () => {
     const [results, setResults] = useState<Student[]>([]);
     const [isSearching, setIsSearching] = useState<boolean>(false);
 
@@ -25,7 +27,7 @@ const SearchStudentsTab = () => {
             <h2>Lookup tool</h2>
             <Formik
                 initialValues={{schoolName: ''}}
-                onSubmit={() => console.log('aight')}
+                onSubmit={() => console.log('submitted')}
             >
                 <StudentSearchInput 
                     label="look up" 
@@ -37,14 +39,10 @@ const SearchStudentsTab = () => {
             </Formik>
             <div>
                 <h3>Results</h3>
-                { !isSearching && 'No search' }
-                { results.length > 0 &&  results.map((s: Student, i: number) => (
-                    <div key={i}>{s.firstName}</div>
-                ))}
-                {isSearching && !results.length && <div>No reasult</div>}
+                <StudentsTable students={results} isSearching={isSearching} />
             </div>
         </div>
     );
 };
 
-export default SearchStudentsTab;
+export default StudentLookupTab;

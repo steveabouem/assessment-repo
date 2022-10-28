@@ -1,0 +1,29 @@
+* {
+    transition: .3s;
+}
+
+.main-container {
+    padding: 15px;
+    background: #0e1218;
+
+    h2 {
+        color: #c1bbbd;
+    }
+
+    .tab-links-wrapper {
+        border-bottom: .5px solid #21252f;
+        .tab-link {
+            color: #8c97a8;
+
+            &:last-of-type {
+                margin-left: 15px;
+            }
+
+            &.active {
+                color: #fefeff;
+                font-weight: bolder;
+                border-bottom: 1px solid #eda1a1ca;
+            }
+        }
+    }
+}

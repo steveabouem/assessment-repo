@@ -1,0 +1,21 @@
+table {
+    width: 45vw;
+    margin: auto;
+    min-height: 50vh;
+    max-height: 50vh;
+    background: #191f28;
+    border: 1px solid;
+
+    thead {
+        background: #637489;
+        color: #c1bbbd;
+    }
+
+    tr {
+        color: #fcebeb;
+        max-height: 50px;
+        &:nth-child(even) {
+            background: #8c97a8;
+        }
+    }
+}

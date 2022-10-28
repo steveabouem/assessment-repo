@@ -1,0 +1,26 @@
+.new-student-form {
+    background: #191f28;
+
+    label {
+        color: #687489;
+
+        svg {
+            color: #eda1a1;
+        }
+    }
+    .grades-list {
+        background-color: #191f28;
+    }
+
+    input {
+        background: #fee8e8;
+        color: grey;
+    }
+
+    button {
+        &:hover {
+            background: #eda1a1;
+            color: #523d49;
+        }
+    }
+}
