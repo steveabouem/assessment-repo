@@ -1,28 +1,30 @@
+@import "variables";
+
 * {
     transition: .3s;
 }
 
 .main-container {
     padding: 15px;
-    background: #0e1218;
+    background: $darkest;
 
     h2 {
-        color: #c1bbbd;
+        color: $rosy-dark;
     }
 
     .tab-links-wrapper {
-        border-bottom: .5px solid #21252f;
+        border-bottom: .5px solid $dark;
         .tab-link {
-            color: #8c97a8;
+            color: $smoke;
 
             &:last-of-type {
                 margin-left: 15px;
             }
 
-            &.active {
+            &:hover, &.active {
                 color: #fefeff;
                 font-weight: bolder;
-                border-bottom: 1px solid #eda1a1ca;
+                border-bottom: 1px solid $rosy;
             }
         }
     }

@@ -1,21 +1,43 @@
-table {
+@import "../../../variables.scss";
+.student-search-wrapper {
     width: 45vw;
-    margin: auto;
-    min-height: 50vh;
-    max-height: 50vh;
-    background: #191f28;
-    border: 1px solid;
 
-    thead {
-        background: #637489;
-        color: #c1bbbd;
+    .student-search-input {
+        height: 45px;
+        label {
+            color: white;
+            color: $rosy-dark;
+            font-size: 1.2em;
+        }
     }
 
-    tr {
-        color: #fcebeb;
-        max-height: 50px;
-        &:nth-child(even) {
-            background: #8c97a8;
+    table {
+        width: 45vw;
+        margin: auto;
+        background: $dark;
+        border: 1px solid;
+        
+        
+        thead {
+            background: $dark;
+            color: $rosy-dark;
+        }
+        tbody {
+            tr {
+                background: $smoke;
+                color: $dark;
+                max-height: 50px;
+           
+                &.no-results {
+                    height: 40vh;
+                    opacity: .3;
+                }
+    
+                &:nth-child(even) {
+                    color: $smoke;
+                    background: $dark;
+                }
+            }
         }
     }
 }

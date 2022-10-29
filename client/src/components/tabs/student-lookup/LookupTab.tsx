@@ -25,21 +25,22 @@ const StudentLookupTab = () => {
     return (
         <div>
             <h2>Lookup tool</h2>
-            <Formik
-                initialValues={{schoolName: ''}}
-                onSubmit={() => console.log('submitted')}
-            >
-                <StudentSearchInput 
-                    label="look up" 
-                    name="schoolName" 
-                    placeholder="e.g: MIT" 
-                    handleChange={searchBySchool} 
-                    inputType="text"
-                />  
-            </Formik>
-            <div>
-                <h3>Results</h3>
-                <StudentsTable students={results} isSearching={isSearching} />
+            <div className="student-search-wrapper m-auto">
+                <Formik
+                    initialValues={{schoolName: ''}}
+                    onSubmit={() => console.log('submitted')}
+                >
+                    <StudentSearchInput 
+                        label="Search for a school" 
+                        name="schoolName" 
+                        placeholder="e.g: MIT" 
+                        handleChange={searchBySchool} 
+                        inputType="text"
+                    />  
+                </Formik>
+                <div>
+                    <StudentsTable students={results} isSearching={isSearching} />
+                </div>
             </div>
         </div>
     );

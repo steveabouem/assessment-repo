@@ -1,15 +1,17 @@
+@import "../../../variables.scss";
+
 .new-student-form {
-    background: #191f28;
+    background: $dark;
 
     label {
-        color: #687489;
+        color: $rosy-dark;
 
         svg {
-            color: #eda1a1;
+            color: $rosy
         }
     }
     .grades-list {
-        background-color: #191f28;
+        background-color: $dark;
     }
 
     input {
@@ -19,7 +21,7 @@
 
     button {
         &:hover {
-            background: #eda1a1;
+            background: $rosy;
             color: #523d49;
         }
     }

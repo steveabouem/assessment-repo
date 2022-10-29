@@ -51,10 +51,10 @@ const StudentsTable = ({ students, isSearching}: { students: Student[], isSearch
       </thead>
       <tbody {...getTableBodyProps()}>
         {!isSearching && (
-          <tr><td className="p-2 text-center" colSpan={12}>Please type in a school name</td></tr>
+          <tr className="no-results"><td className="p-2 text-center" colSpan={12}>Please type in a school name</td></tr>
         )}
         {isSearching && !students.length && (
-          <tr><td className="p-2 text-center" colSpan={12}>No matches for this search</td></tr>
+          <tr className="no-results"><td className="p-2 text-center" colSpan={12}>No matches for this search</td></tr>
         )}
         {rows.map(row => {
           prepareRow(row)
