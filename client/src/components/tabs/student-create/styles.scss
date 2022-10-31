@@ -1,0 +1,28 @@
+@import "../../../variables.scss";
+
+.new-student-form {
+    background: $dark;
+
+    label {
+        color: $lime-dark;
+
+        svg {
+            color: $lime;
+        }
+    }
+    .input-error{
+        color: #ffd519;
+        margin-top: 5px;
+    }
+    
+    .grades-list {
+        background-color: $dark;
+    }
+
+    button {
+        &:hover {
+            background: $lime;
+            color: $dark;
+        }
+    }
+}

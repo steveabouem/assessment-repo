@@ -1,0 +1,58 @@
+@import "../../../variables.scss";
+.student-search-wrapper {
+    width: 45vw;
+
+    .student-search-input {
+        height: 45px;
+        label {
+            color: white;
+            color: $lime-dark;
+            font-size: 1.2em;
+        }
+    }
+
+    table {
+        width: 45vw;
+        margin: auto;
+        background: $dark;
+        border: 1px solid;
+        
+        
+        thead {
+            background: $dark;
+            color: $lime-dark;
+        }
+        tbody {
+            tr {
+                background: $smoke;
+                color: $dark;
+                max-height: 50px;
+           
+                &.no-results {
+                    height: 40vh;
+                    opacity: .3;
+                }
+    
+                &:nth-child(even) {
+                    color: $smoke;
+                    background: $dark;
+                }
+            }
+        }
+    }
+
+    .pagination {
+        color: $smoke;
+        
+        input {
+            width: 45px;;
+        }
+    }
+
+    button {
+        &:hover {
+            background: $lime;
+            color: $dark;
+        }
+    }
+}

@@ -12,7 +12,7 @@ export class Student {
   lastName: string;
 
   @Column({ nullable: false })
-  grade: number;
+  grade: string;
 
   @Column({ nullable: false })
   schoolName: string;
