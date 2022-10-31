@@ -6,14 +6,14 @@ export class Student {
   id: number;
 
   @Column({ nullable: false })
-  firstName: string;
+  first_name: string;
 
   @Column({ nullable: false })
-  lastName: string;
+  last_name: string;
 
   @Column({ nullable: false })
   grade: string;
 
   @Column({ nullable: false })
-  schoolName: string;
+  school_name: string;
 }

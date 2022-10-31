@@ -21,7 +21,7 @@ export class StudentsService {
        * qr.manager.save(student) is the equivalent of running:
        * INSERT INTO student  (
        *  first_name, last_name,
-       *  schoolName, grade
+       *  school_name, grade
        * ) VALUES (...);
        */
 
@@ -35,22 +35,20 @@ export class StudentsService {
 
       return { success: true, data: student };
     } catch (e) {
-      console.log(e);
-      
       qr.release();
       return { success: false, data: e };
     }
   }
 
-  async fetchBySchoolName(schoolName: string): Promise<BaseResponseDTO> {
+  async fetchBySchoolName(school_name: string): Promise<BaseResponseDTO> {
     try {
       /**
-       * SELECT * FROM student WHERE "schoolName" Like `%${val}%';
+       * SELECT * FROM student WHERE "school_name" Like `%${val}%';
        */
       const data = await this.dataSource.manager
         .createQueryBuilder(Student, 'student')
-        .where('LOWER(student.schoolName) LIKE :schoolName', {
-          schoolName: `%${schoolName.toLowerCase()}%`,
+        .where('LOWER(student.school_name) LIKE :school_name', {
+          school_name: `%${school_name.toLowerCase()}%`,
         })
         .getMany();
 
