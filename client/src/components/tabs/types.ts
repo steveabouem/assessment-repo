@@ -11,8 +11,8 @@ export interface StudentSearchResults {
 
 export interface Student {
     id: number;
-    firstName: string;
-    lastName: string;
-    schoolName: string;
+    first_name: string;
+    last_name: string;
+    school_name: string;
     grade: string;
 }

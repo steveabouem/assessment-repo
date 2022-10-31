@@ -2,18 +2,53 @@
 
 * {
     transition: .3s;
+    font-family:'Dosis', sans-serif;
+    input {
+        background: $lime-light;
+        color: $darkest;
+    }
 }
 
+.toastContainer {
+    z-index: 1;
+    .toast {
+        &:not(.show) {
+            display: flex;
+        }
+
+        svg {
+            background: #6c757d;
+            &:hover {
+                background: black;
+            }
+        }
+    }
+}
 .main-container {
     padding: 15px;
     background: $darkest;
 
-    h2 {
-        color: $rosy-dark;
+    h1, h2, h3 {
+        color: $lime-dark;
     }
 
     .tab-links-wrapper {
         border-bottom: .5px solid $dark;
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            
+            img {
+                padding: 3px;
+                height: 45px;
+                width: 45px;
+                background: #ffffff;
+                border-radius: 80px;
+                object-fit: contain;
+            }
+        }
         .tab-link {
             color: $smoke;
 
@@ -23,9 +58,17 @@
 
             &:hover, &.active {
                 color: #fefeff;
-                font-weight: bolder;
-                border-bottom: 1px solid $rosy;
+                border-bottom: 1px solid $lime;
             }
         }
+
+        .theme-select {
+            font-size: 1.2em;
+            color: white;
+
+            &.light {
+                color: black;
+            }
+        };
     }
 }

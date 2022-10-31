@@ -8,4 +8,5 @@ export interface StudentFieldProps {
     fieldName: string;
     icon: any;
     children?: JSX.Element;
+    error?: string;
 }

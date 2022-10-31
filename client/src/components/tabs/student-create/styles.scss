@@ -4,25 +4,25 @@
     background: $dark;
 
     label {
-        color: $rosy-dark;
+        color: $lime-dark;
 
         svg {
-            color: $rosy
+            color: $lime;
         }
     }
+    .input-error{
+        color: #ffd519;
+        margin-top: 5px;
+    }
+    
     .grades-list {
         background-color: $dark;
     }
 
-    input {
-        background: #fee8e8;
-        color: grey;
-    }
-
     button {
         &:hover {
-            background: $rosy;
-            color: #523d49;
+            background: $lime;
+            color: $dark;
         }
     }
 }
