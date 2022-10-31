@@ -1,6 +1,10 @@
 @import "../../../variables.scss";
 .student-search-wrapper {
     width: 45vw;
+    
+    @media screen and (max-width: 485px) {
+        width: 80vw;
+    }
 
     .student-search-input {
         height: 45px;
@@ -8,15 +12,24 @@
             color: white;
             color: $lime-dark;
             font-size: 1.2em;
+            @media screen and (max-width: 485px) {
+                font-size: 12px;
+            }
+        }
+        
+        @media screen and (max-width: 485px) {
+            height: 30px;
         }
     }
 
     table {
-        width: 45vw;
+        width: 100%;
         margin: auto;
         background: $dark;
         border: 1px solid;
-        
+        @media screen and (max-width: 485px) {
+            font-size: 12px;
+        }
         
         thead {
             background: $dark;
@@ -46,6 +59,9 @@
         
         input {
             width: 45px;;
+        }
+        @media screen and (max-width: 485px) {
+            font-size: 12px;
         }
     }
 

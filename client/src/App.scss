@@ -24,22 +24,33 @@
         }
     }
 }
+
 .main-container {
     padding: 15px;
     background: $darkest;
 
+    @media screen and (max-width: 485px) {
+        padding: 10px;
+    }
+
     h1, h2, h3 {
         color: $lime-dark;
+        @media screen and (max-width: 485px) {
+            font-size: 14px;
+            padding-bottom: 5px;;
+        }
     }
 
     .tab-links-wrapper {
         border-bottom: .5px solid $dark;
-
+        
         .logo-wrapper {
             display: flex;
             align-items: center;
             flex: 1;
-            
+            color: $white;
+            font-size: 1.5em;
+
             img {
                 padding: 3px;
                 height: 45px;
@@ -47,6 +58,10 @@
                 background: #ffffff;
                 border-radius: 80px;
                 object-fit: contain;
+            }
+
+            @media screen and (max-width: 485px) {
+                font-size: 14px;
             }
         }
         .tab-link {
@@ -57,18 +72,13 @@
             }
 
             &:hover, &.active {
-                color: #fefeff;
+                color: $white;
                 border-bottom: 1px solid $lime;
             }
         }
 
-        .theme-select {
-            font-size: 1.2em;
-            color: white;
-
-            &.light {
-                color: black;
-            }
-        };
+        @media screen and (max-width: 485px) {
+            font-size: 12px;
+        }
     }
 }
