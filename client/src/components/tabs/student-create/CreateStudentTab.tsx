@@ -70,7 +70,7 @@ const CreateStudentTab = () => {
                 onSubmit={handleSubmit}
             >
                 {({errors, isValid, dirty, submitForm, isSubmitting, setFieldValue}) => (
-                    <div className="new-student-form d-flex flex-column align-items-center justify-contet-between w-25 p-2 m-auto">
+                    <div className="new-student-form d-flex flex-column align-items-center justify-contet-between p-2 m-auto">
                         <StudentFormInput label="First Name" icon={faUser} error={errors?.first_name} fieldName="first_name" />
                         
                         <StudentFormInput label="Last Name" icon={faUser} error={errors?.last_name} fieldName="last_name" />
