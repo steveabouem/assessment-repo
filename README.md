@@ -21,6 +21,12 @@ A sample fullstack app designed to register student grades and search all studen
     ```
     cd client && npm i
     ```
+- Create target database in postgres
+    ```
+    sudo -u postgres psql
+    create database grades;
+    ```
+    
 - Start api server 
     ```
     nest start --watch
