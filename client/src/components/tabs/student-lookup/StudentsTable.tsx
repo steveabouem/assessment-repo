@@ -29,7 +29,6 @@ const StudentsTable = ({ students, isSearching}: StudentTableProps) => {
     []
   )
   
-  
   const {
     getTableProps,
     getTableBodyProps,
@@ -120,6 +119,7 @@ const StudentsTable = ({ students, isSearching}: StudentTableProps) => {
               gotoPage(page)
             }}
             min={1}
+            value={pageIndex + 1}
           />
         </span>
       </div>

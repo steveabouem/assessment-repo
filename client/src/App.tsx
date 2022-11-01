@@ -18,7 +18,7 @@ const routes = [
 function App() {
   return (
     <MemoryRouter initialEntries={['/', '/search']}>
-      <ToastContainer  position="top-right" delay={100000}/>
+      <ToastContainer  position="top-right" delay={3000}/>
       <div className="main-container h-100 w-100 position-absolute overflow-hidden">
         <div className="tab-links-wrapper d-flex mb-2">
           <div className="logo-wrapper">

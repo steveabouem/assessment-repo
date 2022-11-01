@@ -12,11 +12,11 @@ import useToast from "./useToast";
 
 
 const grades: StudentGradeOption[] = [ 
-    {label: "A+", value: "A+" }, {label: "A-", value: "A-" }, 
-    {label: "B+", value: "B+" }, {label: "B-", value: "B-" }, 
-    {label: "C+", value: "C+" }, {label: "D-", value: "D-" }, 
-    {label: "D+", value: "D+" }, {label: "D-", value: "D-" }, 
-    {label: "F", value: "F"}
+    {label: "A+", value: "A+" }, {label: "A", value: "A" }, 
+    {label: "A-", value: "A-" }, {label: "B+", value: "B+" },
+    {label: "B-", value: "B-" }, {label: "C+", value: "C+" }, 
+    {label: "D-", value: "D-" }, {label: "D+", value: "D+" },
+    {label: "D-", value: "D-" }, {label: "F", value: "F"}
 ];
 
 const customStyles = {
@@ -36,11 +36,13 @@ const CreateStudentTab = () => {
     const {showCustomSuccess, showCustomError } = useToast();
 
     const handleSubmit = async (values: CreateStudentDTO) => {
-        await axios.post<CreateStudentDTO>('//localhost:3001/students', {...values})
+        axios.post<CreateStudentDTO>('//localhost:3001/students', {...values})
+        .then(() => {
+            showCustomSuccess();
+        })
         .catch(() => {
             showCustomError();
         });
-        showCustomSuccess();
     };
     
     const validation =Yup.object().shape({

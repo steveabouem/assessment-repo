@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { Field, Formik } from "formik";
-import { Student } from "../types";
+import { Student } from "./types";
 import StudentsTable from "./StudentsTable";
 import "./styles.scss";
 

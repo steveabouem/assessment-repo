@@ -3,12 +3,15 @@ import { Injectable } from '@nestjs/common';
 import { Student } from './students.entity';
 import { BaseResponseDTO } from 'src/common/dto/base-response.dto';
 import { CreateStudentDTO } from './dto/create-student.dto';
+import { NewStudentResponseDTO } from './dto/new-student-response.dto';
 
 @Injectable()
 export class StudentsService {
   constructor(private dataSource: DataSource) {}
 
-  async create(newStudent: CreateStudentDTO): Promise<BaseResponseDTO> {
+  async create(
+    newStudent: CreateStudentDTO,
+  ): Promise<NewStudentResponseDTO | BaseResponseDTO> {
     const qr = this.dataSource.createQueryRunner();
     await qr.connect();
     await qr.startTransaction();
